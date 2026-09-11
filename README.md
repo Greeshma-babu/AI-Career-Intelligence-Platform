@@ -14,3 +14,15 @@ and httpx, processed through the NLP pipeline, and stored in PostgreSQL with pgv
 similarity search. Sentiment analysis is performed using both rule-based VADER and transformer-based
 DistilBERT. A LangChain Retrieval-Augmented Generation pipeline retrieves relevant job market
 chunks from pgvector and passes them to a locally running Ollama LLM to generate grounded, sourcecited career coaching responses — with no cloud API dependency
+
+###### Job Description
+An AI Engineer develops intelligent applications using Python, LLMs, RAG, LangChain, LangGraph, and AI Agents. They build NLP, Computer Vision, and Generative AI solutions using frameworks such as PyTorch, TensorFlow, and Hugging Face Transformers. They implement embeddings, vector databases, FAISS, prompt engineering, and model fine-tuning for AI applications. They develop and deploy AI services using FastAPI, REST APIs, Docker, and cloud platforms. They integrate and optimize AI systems using MCP, Ollama, MLOps, CI/CD, and model evaluation techniques
+
+
+##### Instruction to run
+
+python -m uvicorn main:app --reload
+
+streamlit run .\frontend\streamlit_app.py
+
+python app\nlp\preprocessing.py

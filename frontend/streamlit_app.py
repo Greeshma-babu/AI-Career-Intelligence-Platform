@@ -612,11 +612,6 @@ if active_tab == "📄 My Resume" or active_tab == "My Resume":
             height=100,
             label_visibility="collapsed",
         )
-    response = requests.post(
-        "http://localhost:8000/api/job/description",
-        data={"job_description": job_description},
-        timeout=60,
-    )
     # ========================================================
     # ANALYZE BUTTON
     # ========================================================
@@ -632,6 +627,11 @@ if active_tab == "📄 My Resume" or active_tab == "My Resume":
         type="primary",
     )
 
+    response = requests.post(
+        "http://localhost:8000/api/job/description",
+        data={"job_description": job_description},
+        timeout=60,
+    )
     # ========================================================
     # ANALYZE
     # ========================================================
