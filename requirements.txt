@@ -17,4 +17,5 @@ apscheduler
 langchain 
 langchain-community
 scikit-learn
-unicodedata
+plotly
+pandas
