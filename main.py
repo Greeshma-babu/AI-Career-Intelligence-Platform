@@ -1,13 +1,10 @@
 import os
 
+
 from fastapi import FastAPI, File, Form, UploadFile
 from app.matching.skills import analyze_resume_and_job
 from app.api.news import router as news_router
-
-# ============================================================
-# MARKET TRENDS ROUTER
-# ============================================================
-
+from app.api.career import router as career_router
 from app.api.market import router as market_router
 
 # ============================================================
@@ -26,6 +23,7 @@ app = FastAPI(
 
 app.include_router(market_router)
 app.include_router(news_router)
+app.include_router(career_router)
 
 RESUME_DIR = "data/resume"
 JOB_DIR = "data/job"

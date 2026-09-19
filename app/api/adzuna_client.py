@@ -61,7 +61,7 @@ class AdzunaClient:
         # Build URL
         # ----------------------------------------------------
 
-        url = f"{self.base_url}/jobs/" f"{country}/search/{page}"
+        url = f"{self.base_url}/jobs/{country}/search/{page}"
 
         # ----------------------------------------------------
         # Request parameters
@@ -88,6 +88,9 @@ class AdzunaClient:
                 url,
                 params=params,
                 timeout=30,
+                headers={
+                    "User-Agent": "TalentPulse/1.0",
+                },
             )
 
             response.raise_for_status()
@@ -101,6 +104,14 @@ class AdzunaClient:
         except requests.exceptions.Timeout:
 
             raise RuntimeError("Adzuna API request timed out.")
+
+        # ----------------------------------------------------
+        # SSL error
+        # ----------------------------------------------------
+
+        except requests.exceptions.SSLError as error:
+
+            raise RuntimeError(f"Adzuna SSL connection error: {error}")
 
         # ----------------------------------------------------
         # HTTP error
