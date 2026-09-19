@@ -26,3 +26,15 @@ python -m uvicorn main:app --reload
 streamlit run .\frontend\streamlit_app.py
 
 python app\nlp\preprocessing.py
+
+Screenshots: 
+<img width="1885" height="880" alt="image" src="https://github.com/user-attachments/assets/de57d879-e1ac-455d-bbd9-0f59d8e16134" />
+<img width="1865" height="855" alt="image" src="https://github.com/user-attachments/assets/f3bc843b-cc82-4fa9-a141-4f67f9f66f1d" />
+<img width="1885" height="807" alt="image" src="https://github.com/user-attachments/assets/9bfa3bfd-8382-4a2b-a7c2-c6467d270412" />
+<img width="1866" height="832" alt="image" src="https://github.com/user-attachments/assets/179bf926-8caa-48ad-ae68-eb74a9e0ef54" />
+<img width="1877" height="860" alt="4" src="https://github.com/user-attachments/assets/b5a5efa2-bbe8-4910-bb32-606f18efc44b" />
+
+
+
+
+
